@@ -28,6 +28,7 @@ header {
 
 .logo img {
     display: block;
+    border-radius: 50%;
 }
 
 .header-text {
