@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <figure>
+                <img src="assets/images/logo.png" width="100" alt="RR Wiki" />
+            </figure>
+        </div>
+        <div class="header-text">
+            <h1>RR Wiki</h1>
+            <p>Seu portal de conhecimento em tecnologia!</p>
+        </div>
+    </header>
+
+    <div class="bar"></div>
+
+    <div class="content">
+        <nav class="sidebar">
+            <h2>Título</h2>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#thymeleaf-example">Thymeleaf example</a></li>
+                <li><a href="#see-also">See also</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#external-links">External links</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <h1>Thymeleaf</h1>
+
+            <section>
+                <p>
+                    Thymeleaf is a Java XML/XHTML/HTML5 template engine that can work both in web (servlet-based) and
+                    non-web environments. It is better suited for serving XHTML/HTML5 at the view layer of MVC-based web
+                    applications, but it can process any XML file even in offline environments. It provides full Spring
+                    Framework integration.
+                </p>
+                <p>
+                    In web applications Thymeleaf aims to be a complete substitute for JavaServer Pages (JSP), and
+                    implements the concept of Natural Templates: template files that can be directly opened in browsers
+                    and that still display correctly as web pages.
+                </p>
+                <p>
+                    Thymeleaf is open-source software, licensed under the Apache License 2.0.
+                </p>
+            </section>
+            <article id="features">
+                <h2>Features</h2>
+
+                <ul>
+                    <li>
+                        Java template engine for XML, XHTML and HTML5.
+                    </li>
+                    <li>
+                        Works both in web and non-web (offline) environments. No hard dependency on the Servlet API.
+                    </li>
+                    <li>
+                        Based on modular feature sets called dialects.
+                        <ul>
+                            <li>
+                                Dialect features (e.g.: evaluation, iteration, etc.) are applied by linking them to
+                                template's tags and/or attributes.
+                            </li>
+                            <li>
+                                Two dialects available out-of-the-box: Standard and SpringStandard (for Spring MVC apps,
+                                same syntax as Standard).
+                            </li>
+                            <li>
+                                Developers can extend and create custom dialects.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Several template modes:
+                        <ul>
+                            <li>
+                                XML: validating against a DTD or not.
+                            </li>
+                            <li>
+                                XHTML 1.0 and 1.1: validating against standard DTDs or not.
+                            </li>
+                            <li>
+                                HTML5: both XML-formed code and legacy-based HTML5. Legacy non-XML code will be
+                                automatically cleaned and converted to XML form.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Full (and extensible) internationalization support.
+                    </li>
+                    <li>
+                        Configurable, high performance parsed template cache that reduces input/output to the minimum.
+                    </li>
+                    <li>
+                        Automatic DOCTYPE translations –from template DTD to result DTD– for (optional) validation of
+                        both template and result code.
+                    </li>
+                    <li>
+                        Extremely extensible: can be used as a template engine framework if needed.
+                    </li>
+                    <li>
+                        Complete documentation including several example applications.
+                    </li>
+                </ul>
+            </article>
+            <article id="thymeleaf-example">
+                <h2>Thymeleaf example</h2>
+                <p>
+                    The following example produces an HTML5 table with rows for each item of a
+                    <code>List&lt;Product&gt;</code> variable
+                    called <code>allProducts</code>.
+                </p>
+                <pre>
+                    <code>
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                &lt;th th:text="#{msgs.headers.name}"&gt;Name&lt;/th&gt;
+                &lt;th th:text="#{msgs.headers.price}"&gt;Price&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;  
+            &lt;tbody&gt;
+                &lt;tr th:each="prod : ${allProducts}">
+                &lt;td th:text="${prod.name}">Oranges&lt;/td&gt;
+                &lt;td th:text="${#numbers.formatDecimal(prod.price,1,2)}">0.99&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+                    </code>
+                </pre>
+
+            </article>
+            <article id="see-also">
+                <h2>See also</h2>
+                <ul>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Web_template_system" target="_blank" rel="noopener">
+                            Template engine (web)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/JavaServer_Pages" target="_blank" rel="noopener">
+                            JavaServer Pages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Spring_Framework" target="_blank" rel="noopener">
+                            Spring Framework
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/FreeMarker" target="_blank" rel="noopener">
+                            FreeMarker
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Apache_Velocity" target="_blank" rel="noopener">
+                            Apache Velocity
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Template_Attribute_Language" target="_blank" rel="noopener">
+                            Template Attribute Language
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article id="references">
+                <h2>References</h2>
+                <ol>
+                    <li>
+                        <a href="https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html" target="_blank" rel="noopener">
+                            "Thymeleaf 3.1: What's new and how to migrate - Thymeleaf".
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.archive.org/web/20111008055319/http://www.thymeleaf.org/features.html" target="_blank" rel="noopener">
+                            "Features - Thymeleaf: Java XML/XHTML/HTML5 template engine". Archived from the original on 2011-10-08. Retrieved 2011-10-16. Thymeleaf Features
+                        </a>
+                    </li>
+                </ol>
+            </article>
+            <article id="external-links">
+                <h2>External links</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.thymeleaf.org" target="_blank" rel="noopener">Thymeleaf</a>
+                    </li>
+                </ul>
+            </article>
+        </main>
+
+        <aside class="anchors">
+            <h2>Neste Artigo</h2>
+            <ul>
+                <li><a href="#">Âncoras</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 RR Wiki. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
